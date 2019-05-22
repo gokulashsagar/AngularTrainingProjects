@@ -16,6 +16,14 @@
         "category": "Category 1",
         "desc": "Product 2 (Category 1)",
         "count":100
+      },
+      {
+        "id": "3",
+  
+        "pname": "Product 3" ,
+        "category": "Category 2",
+        "desc": "Product 3 (Category 2)",
+        "count":100
       }
      
     ]

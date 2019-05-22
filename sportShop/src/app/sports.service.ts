@@ -8,6 +8,6 @@ export class SportsService {
   constructor( private http: HttpClient) {      
   }
   getProducts(){
-    return this.http.get("http://localhost:3000/products/")
+    return this.http.get("http://localhost:4000/products/")
   } 
 }

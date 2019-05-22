@@ -1,3 +1,21 @@
-<div *ngFor="let a of products; let count = index">
-  {{a.category}}
+<div>
+  <table align="center" border="1">
+    <thead style="font-weight:bold">
+      <tr><td>Category {{size}}</td>
+      <td> Id</td>
+      <td>Product</td>
+      <td>Description</td>
+      <td>Count</td>
+      </tr>
+    </thead>
+    <tbody >
+        <tr  *ngFor="let a of products; let count = index"><td> {{a.category}}</td>
+          <td> {{a.id}}</td>
+          <td> {{a.pname}}</td>
+          <td> {{a.desc}}</td>
+          <td> {{a.count}}</td>
+          </tr>
+    </tbody>
+  </table>
+ 
 </div>  
