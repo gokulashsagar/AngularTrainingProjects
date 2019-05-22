@@ -1,0 +1,24 @@
+{
+  "friends": [
+    {
+      "name": "Power Star",
+      "years": 45,
+      "id": 6
+    },
+    {
+      "name": "Captain America",
+      "years": 150,
+      "id": 7
+    },
+    {
+      "name": "Iron Man",
+      "years": 45,
+      "id": 8
+    },
+    {
+      "name": "Power Star\t",
+      "years": 45,
+      "id": 9
+    }
+  ]
+}

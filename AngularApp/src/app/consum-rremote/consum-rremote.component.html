@@ -1,0 +1,41 @@
+<p>
+  List of Rest Objects
+</p>
+<div>
+  <table align="center" border="1" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Years</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of friends">
+        <td>{{a.name}}</td>
+        <td>{{a.years}}</td>
+        <td><button (click)="delete(a.id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<div>
+  <button (click)="displayAddFriendForm()" [disabled]="displayForm">Add New Friend</button>
+  <br>
+  <div *ngIf="displayForm">
+    <fieldset>
+      <legend>Add New Friend</legend>
+      <form #addFriendForm="ngForm" (ngSubmit)="saveFriend(addFriendForm.value)">
+        <label>Name :</label>
+        <input type="text" name="name" [(ngModel)]="name"><br>
+        <label>Years :</label>
+        <input type="number" name="years" [(ngModel)]="years"><br>
+        <button type="submit">Add Friend</button>
+      </form>
+
+    </fieldset>
+
+    {{message}}
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div>
+
+  <div>
+    <h1>Directives: ngFor Demo</h1>
+    <ol> Friends Array
+    <li *ngFor="let f of friends; let i=index">{{f}} is at {{i}}</li>
+  </ol> 
+  <ol> Locations Array
+      <li *ngFor="let l of locations">{{l.city}} has code {{l.code}}</li>
+    </ol>
+  </div>
+  <div>Locations in tabular form
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Code</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let l of locations">
+            <th>{{l.city}}</th>
+            <th>{{l.code}}</th>
+          </tr>
+    </tbody>
+  </table>
+</div>
+
+  <div>
+     Getting 1st element of Friends Array:- {{friends[0]}}
+    </div>
+<br>
+ <div>
+  Simple Demo of ngIf Directive:
+  <button *ngIf="display">Click me to Hide Me</button>
+  <div>
+  Button click uses of ngIf
+  <button  (click)="onOff()">oN/Off</button>
+  <div *ngIf="display">Content</div>
+ </div>
+ </div>
+  <div>
+    Demo ngIf else
+    <div>
+      <button (click)="checker()" *ngIf="checkOne; else template"></button>
+      <div class="one"> Aqua</div>
+      <ng-template #template>
+          <div  class="two">Green</div>
+      </ng-template>
+      
+    </div>
+  </div>
+  
+
+
+</div>

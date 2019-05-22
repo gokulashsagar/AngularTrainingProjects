@@ -1,0 +1,14 @@
+<div>
+
+  <form #todoForm="ngForm" (ngSubmit)="addToDoForm(todoForm)">
+       <label>Add</label>
+       <input type="text" name="todo" [(ngModel)]="todo">
+       <button type="submit"> Add Todo</button>
+  </form>
+  <br>
+  <ol>
+    <li *ngFor="let t of tasks; let taskCounter=index">{{t}}</li>
+    <button (click)="taskCompleted(taskCounter)">Done</button>  
+  </ol>
+</div> 
+ 

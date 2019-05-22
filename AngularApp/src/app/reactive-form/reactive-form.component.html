@@ -1,0 +1,23 @@
+<div>
+
+    <br>
+    <br>
+  Angular Reactive Form
+  <br>
+  <br>
+  <form [formGroup]='simpleForm' (ngSubmit)="saveData(simpleForm.value)">
+    First Name: <input type="text" formControlName="fname">
+    <br>
+    Last Name: <input type="text" formControlName="lname">
+    <br>
+    Hobby:
+    <select formControlName="hobby">
+      <option>swimming</option>
+      <option>Gaming</option>
+      <option>Painting</option>
+      <option>Singing</option>
+    </select>
+    <br>  
+    <button type="submit" [disabled]="simpleForm.invalid">Submit</button>
+  </form>
+</div>  
