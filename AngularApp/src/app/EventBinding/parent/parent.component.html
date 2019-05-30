@@ -1,0 +1,10 @@
+
+<div class="parent">
+  Name: {{name}}
+
+</div>
+<div class="child">
+<app-child [sendName]="name" (nameUpdated)="getNameUpdate($event)"></app-child>
+  
+</div>
+

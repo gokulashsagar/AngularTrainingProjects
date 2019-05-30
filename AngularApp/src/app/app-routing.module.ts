@@ -14,6 +14,9 @@ import { InbuiltPipeComponent } from './pipes/inbuilt-pipe/inbuilt-pipe.componen
 import { CustomSortComponent } from './pipes/custom-sort/custom-sort.component';
 import { Service1ConsumeComponent } from './service1-consume/service1-consume.component';
 import { ConsumRremoteComponent } from './consum-rremote/consum-rremote.component';
+import { UpdateFriendComponent } from './update-friend/update-friend.component';
+import { ParentComponent } from './EventBinding/parent/parent.component';
+import { BoostrapComponent } from './boostrap/boostrap.component';
 
 const routes: Routes = [
   {
@@ -53,8 +56,16 @@ const routes: Routes = [
         component: ReactiveFormComponent  
       },
       {
+        path: 'Bootstrap',
+        component: BoostrapComponent
+      },
+      {
         path:'task',
         component: TaskComponent     
+      },
+      {
+        path: 'eventBind',
+        component : ParentComponent
       },
       {
         path:'pipe',
@@ -68,16 +79,17 @@ const routes: Routes = [
           component:CustomSortComponent 
         }
         
-         
-
         ]
 
       }]
     },
-
   {
     path: '**',
     component: NotFoundComponent
+  },
+  {
+    path: 'updatefriend/:id',
+    component: UpdateFriendComponent
   }
 ];
 

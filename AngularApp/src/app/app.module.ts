@@ -23,6 +23,10 @@ import { SortNumberPipe } from './pipes/pipes/sort-number.pipe';
 import { Service1ConsumeComponent } from './service1-consume/service1-consume.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConsumRremoteComponent } from './consum-rremote/consum-rremote.component';
+import { UpdateFriendComponent } from './update-friend/update-friend.component';
+import { ParentComponent } from './EventBinding/parent/parent.component';
+import { ChildComponent } from './EventBinding/child/child.component';
+import { BoostrapComponent } from './boostrap/boostrap.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { ConsumRremoteComponent } from './consum-rremote/consum-rremote.componen
     SortPipe,
     SortNumberPipe,
     Service1ConsumeComponent,
-    ConsumRremoteComponent
+    ConsumRremoteComponent,
+    UpdateFriendComponent,
+    ParentComponent,
+    ChildComponent,
+    BoostrapComponent
   ],
   imports: [
     BrowserModule,

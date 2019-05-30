@@ -10,6 +10,9 @@ export class RemoteService {
   getRemoteUsers(){
     return this.http.get("http://localhost:3000/friends/")
   }
+  getRemoteUsersByID(id){
+    return this.http.get("http://localhost:3000/friends/"+id)
+  }
   addFriend(friend){
     return this.http.post("http://localhost:3000/friends/",friend) 
   }

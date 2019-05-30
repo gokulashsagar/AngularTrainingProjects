@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RemoteService } from '../services/remote.service';
+import { jsonpCallbackContext } from '@angular/common/http/src/module';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-consum-remote',
@@ -11,7 +13,7 @@ export class ConsumRremoteComponent implements OnInit {
   friends: any = []
   displayForm: Boolean = false
   message: String = ""
-  constructor(private remote: RemoteService) { }
+  constructor(private remote: RemoteService ,private router: Router) { }
   // ngOnInit() {
   //   this.remote.getRemoteUsers().subscribe(
   //     function(data){
@@ -36,11 +38,20 @@ export class ConsumRremoteComponent implements OnInit {
     console.log("displayAddFriendForm")
     this.displayForm = true;
   }
+  //Routing Programatically (Manually)
+  update =function(id){
+    this.router.navigate(["/updatefriend,id"])
+
+  }
+
   ngOnInit() {
     this.remote.getRemoteUsers().subscribe(
       (data) => {
         console.log(data)
         this.friends = data
+      },
+      (error)=>{
+        this.message="Error..."+ JSON.stringify(error)
       }
     )
   }
